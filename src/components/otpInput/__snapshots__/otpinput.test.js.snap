@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test OTP input Render correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "width": "100%",
+      },
+      {},
+    ]
+  }
+>
+  <TextInput
+    autoCorrect={false}
+    autoFocus={false}
+    keyboardType="numeric"
+    maxLength={1}
+    multiline={false}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    placeholder=""
+    placeholderTextColor="#E4E4E4"
+    style={
+      [
+        {
+          "borderBottomWidth": 2,
+          "borderColor": "#E9E9E9",
+          "color": "#000000",
+          "fontFamily": "AvenirNext-Medium",
+          "fontSize": 22,
+          "height": 70,
+          "marginRight": 4,
+          "textAlign": "center",
+          "width": 60,
+        },
+        {},
+        {
+          "borderColor": "#333333",
+        },
+      ]
+    }
+    textAlign="center"
+    value=""
+  />
+  <TextInput
+    autoCorrect={false}
+    autoFocus={false}
+    keyboardType="numeric"
+    maxLength={1}
+    multiline={false}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    placeholder=""
+    placeholderTextColor="#E4E4E4"
+    style={
+      [
+        {
+          "borderBottomWidth": 2,
+          "borderColor": "#E9E9E9",
+          "color": "#000000",
+          "fontFamily": "AvenirNext-Medium",
+          "fontSize": 22,
+          "height": 70,
+          "marginRight": 4,
+          "textAlign": "center",
+          "width": 60,
+        },
+        {},
+        {
+          "borderColor": "#333333",
+        },
+      ]
+    }
+    textAlign="center"
+    value=""
+  />
+  <TextInput
+    autoCorrect={false}
+    autoFocus={false}
+    keyboardType="numeric"
+    maxLength={1}
+    multiline={false}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    placeholder=""
+    placeholderTextColor="#E4E4E4"
+    style={
+      [
+        {
+          "borderBottomWidth": 2,
+          "borderColor": "#E9E9E9",
+          "color": "#000000",
+          "fontFamily": "AvenirNext-Medium",
+          "fontSize": 22,
+          "height": 70,
+          "marginRight": 4,
+          "textAlign": "center",
+          "width": 60,
+        },
+        {},
+        {
+          "borderColor": "#333333",
+        },
+      ]
+    }
+    textAlign="center"
+    value=""
+  />
+  <TextInput
+    autoCorrect={false}
+    autoFocus={false}
+    keyboardType="numeric"
+    maxLength={1}
+    multiline={false}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    placeholder=""
+    placeholderTextColor="#E4E4E4"
+    style={
+      [
+        {
+          "borderBottomWidth": 2,
+          "borderColor": "#E9E9E9",
+          "color": "#000000",
+          "fontFamily": "AvenirNext-Medium",
+          "fontSize": 22,
+          "height": 70,
+          "marginRight": 4,
+          "textAlign": "center",
+          "width": 60,
+        },
+        {},
+        {
+          "borderColor": "#333333",
+        },
+      ]
+    }
+    textAlign="center"
+    value=""
+  />
+</View>
+`;

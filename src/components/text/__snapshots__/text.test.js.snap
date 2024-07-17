@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontFamily": "AvenirNext-Regular",
+        "fontSize": 20,
+      },
+      {
+        "color": "#fff",
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;

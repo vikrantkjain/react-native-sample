@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test intro slider 1`] = `
+<View
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <RNCViewPager
+    collapsable={false}
+    initialPage={0}
+    layoutDirection="ltr"
+    onMoveShouldSetResponderCapture={[Function]}
+    onPageScroll={[Function]}
+    onPageScrollStateChanged={[Function]}
+    onPageSelected={[Function]}
+    style={
+      {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          [
+            undefined,
+            {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          [
+            undefined,
+            {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          [
+            undefined,
+            {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
+        }
+      />
+    </View>
+  </RNCViewPager>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "bottom": "12%",
+          "flexDirection": "row",
+          "height": 40,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "backgroundColor": "rgba(67, 171, 255, 0.4)",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "backgroundColor": "#14A7B5",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "backgroundColor": "rgba(67, 171, 255, 0.4)",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

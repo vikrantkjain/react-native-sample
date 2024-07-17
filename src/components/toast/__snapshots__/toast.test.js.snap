@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Toast component Render successfully 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  testID="TEST-1"
+>
+  <View
+    pointerEvents="auto"
+    style={
+      [
+        {
+          "alignItems": "center",
+          "elevation": 999,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "zIndex": 10000,
+        },
+        {
+          "top": 1214,
+        },
+      ]
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "black",
+          "borderRadius": 5,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "opacity": 1,
+          "padding": 10,
+          "paddingHorizontal": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

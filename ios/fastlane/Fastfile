@@ -1,0 +1,127 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+ 
+  desc "lane to deploy app."
+  lane :development do
+    build_app(scheme: "development",
+              export_options: {
+                method: "development",
+                provisioningProfiles: {
+                  "com.codiant.taqwea-lms" => "TaqweaLMSDevelopment"
+                }
+              },
+              workspace: "DemoCode.xcworkspace",
+              include_bitcode: false)
+              
+    ftp(
+      host: 'ftp.codiantdev.com',
+      username: 'iosdist@codiantdev.com',
+      password: 'xD1a_o?PyL%2DvD1',
+      port:21,
+      upload: {
+        src: "/Users/codiant/Lokesh/rn-template/template/ios/DemoCode.ipa",
+        dest:"/Fastlane/Template/IOS"
+      }
+    )
+  end
+  
+  lane :staging do
+    build_app(scheme: "Staging",
+              export_options: {
+                method: "ad-hoc",
+                provisioningProfiles: {
+                  "com.codiant.taqwea-lms" => "TaqweaLMSAdHoc"
+                }
+              },
+              workspace: "DemoCode.xcworkspace",
+              include_bitcode: false)
+              ftp(
+                host: 'ftp.codiantdev.com',
+                username: 'iosdist@codiantdev.com',
+                password: 'xD1a_o?PyL%2DvD1',
+                port:21,
+                upload: {
+        src: "/Users/codiant/Lokesh/rn-template/template/ios/DemoCode.ipa",
+        dest:"/Fastlane/Template/IOS"
+      }
+              )
+  end
+
+  lane :qa do
+    build_app(scheme: "Qa",
+              export_options: {
+                method: "ad-hoc",
+                provisioningProfiles: {
+                  "com.codiant.taqwea-lms" => "TaqweaLMSAdHoc"
+                }
+              },
+              workspace: "DemoCode.xcworkspace",
+              include_bitcode: false)
+              ftp(
+                host: 'ftp.codiantdev.com',
+                username: 'iosdist@codiantdev.com',
+                password: 'xD1a_o?PyL%2DvD1',
+                port:21,
+                upload: {
+        src: "/Users/codiant/Lokesh/rn-template/template/ios/DemoCode.ipa ",
+        dest:"/Fastlane/Template/IOS"
+      }
+              )
+  end
+  
+  lane :production do
+    build_app(scheme: "Live",
+              export_options: {
+                method: "ad-hoc",
+                provisioningProfiles: {
+                  "com.codiant.taqwea-lms" => "TaqweaLMSAdHoc"
+                }
+              },
+              workspace: "DemoCode.xcworkspace",
+              include_bitcode: false)
+              ftp(
+                host: 'ftp.codiantdev.com',
+                username: 'iosdist@codiantdev.com',
+                password: 'xD1a_o?PyL%2DvD1',
+                port:21,
+                upload: {
+        src: "[root]/DemoCode.ipa ",
+        dest:"/Fastlane/Template/IOS"
+      }
+              )
+  end
+  
+  lane :live do
+    build_app(scheme: "Live",
+              export_options: {
+                method: "app-store",
+                provisioningProfiles: {
+                  "com.codiant.taqwea-lms" => "TaqweaLMSAppStore"
+                }
+              },
+              workspace: "DemoCode.xcworkspace",
+              include_bitcode: true)
+  end
+
+
+ 
+
+
+end

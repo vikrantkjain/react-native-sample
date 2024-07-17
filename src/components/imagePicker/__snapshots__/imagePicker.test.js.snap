@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for MediaPicker Render correctly 1`] = `
+<View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    testID="TEST-01"
+  />
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    style={
+      {
+        "flex": 1,
+        "overflow": "hidden",
+        "position": "absolute",
+        "zIndex": 1,
+      }
+    }
+    transparent={true}
+    visible={false}
+  />
+</View>
+`;

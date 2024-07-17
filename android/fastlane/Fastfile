@@ -1,0 +1,184 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  # desc "Submit a new Beta Build to Play Store"
+  # lane :beta do
+  #   store_password = prompt(text: "Signing Store Password: ", secure_text: true)
+  #   key_password = prompt(text: "Alias Key Password: ", secure_text: true)
+  #   releaseFilePath = File.join(Dir.pwd, "..", "my-release-key.keystore")
+  #   gradle(task: 'clean')
+  #   gradle(
+  #     task: 'bundle',
+  #     build_type: 'Release',
+  #     print_command: false,
+  #     properties: {
+  #       "android.injected.signing.store.file" => releaseFilePath,
+  #       "android.injected.signing.store.password" => store_password,
+  #       "android.injected.signing.key.alias" => "my-key-alias",
+  #       "android.injected.signing.key.password" => key_password,
+  #     }
+  #   )
+  #   upload_to_play_store(
+  #     track: 'internal'
+  #   )
+  #   end
+
+  desc "Create a build for staging"
+  lane :staging do 
+  gradle(task: 'clean')
+    gradle(
+      task: 'assemble',
+      build_type: 'Staging',
+      print_command: false,
+      # properties: {
+      #   "android.injected.signing.store.file" => releaseFilePath,
+      #   "android.injected.signing.store.password" => store_password,
+      #   "android.injected.signing.key.alias" => "my-key-alias",
+      #   "android.injected.signing.key.password" => key_password,
+      # }
+    )
+
+    ftp(
+  host: 'ftp.codiantdev.com',
+  username: 'android@codiantdev.com',
+  password: '(!7{~Ri^S$J[YzV!',
+  port: 21,
+  upload: {
+    src: 'app/build/outputs/apk/staging/release/app-staging-release.apk',
+    dest:'Fastlane/Staging'
+  }
+  )
+end
+
+desc "Create a build for Dev"
+lane :dev do 
+gradle(task: 'clean')
+  gradle(
+    task: 'assemble',
+    build_type: 'Dev',
+    print_command: false,
+    # properties: {
+    #   "android.injected.signing.store.file" => releaseFilePath,
+    #   "android.injected.signing.store.password" => store_password,
+    #   "android.injected.signing.key.alias" => "my-key-alias",
+    #   "android.injected.signing.key.password" => key_password,
+    # }
+  )
+  ftp(
+  host: 'ftp.codiantdev.com',
+  username: 'android@codiantdev.com',
+  password: '(!7{~Ri^S$J[YzV!',
+  port: 21,
+  upload: {
+    src: 'app/build/outputs/apk/dev/release/app-dev-release.apk',
+    dest:'Fastlane/Dev'
+  }
+  )
+end
+
+desc "Create a build for QA"
+lane :qa do 
+gradle(task: 'clean')
+  gradle(
+    task: 'assemble',
+    build_type: 'Qa',
+    print_command: false,
+    # properties: {
+    #   "android.injected.signing.store.file" => releaseFilePath,
+    #   "android.injected.signing.store.password" => store_password,
+    #   "android.injected.signing.key.alias" => "my-key-alias",
+    #   "android.injected.signing.key.password" => key_password,
+    # }
+  )
+  ftp(
+    host: 'ftp.codiantdev.com',
+    username: 'android@codiantdev.com',
+    password: '(!7{~Ri^S$J[YzV!',
+    port: 21,
+    upload: {
+      src: 'app/build/outputs/apk/qa/release/app-qa-release.apk',
+      dest:'Fastlane/Qa'
+    }
+    )
+end
+
+desc "Create a build for Production"
+lane :prod do 
+gradle(task: 'clean')
+  gradle(
+    task: 'assemble',
+    build_type: 'prodRelease',
+    print_command: false,
+    # properties: {
+    #   "android.injected.signing.store.file" => releaseFilePath,
+    #   "android.injected.signing.store.password" => store_password,
+    #   "android.injected.signing.key.alias" => "my-key-alias",
+    #   "android.injected.signing.key.password" => key_password,
+    # }
+  )
+  ftp(
+  host: 'ftp.codiantdev.com',
+  username: 'android@codiantdev.com',
+  password: '(!7{~Ri^S$J[YzV!',
+  port: 21,
+  upload: {
+    src: 'app/build/outputs/apk/prod/release/app-prod-release.apk',
+    dest:'Fastlane/Production'
+  }
+  )
+end
+
+ desc "Create a build for Production"
+ lane :prodBundle do 
+ gradle(task: 'clean')
+   gradle(
+     task: 'bundle',
+     build_type: 'Release',
+     print_command: false,
+      properties: {
+        "android.injected.signing.store.file" => 'releaseFilePath',
+        "android.injected.signing.store.password" => 'store_password',
+        "android.injected.signing.key.alias" => "my-key-alias",
+        "android.injected.signing.key.password" => 'key_password',
+      }
+   )
+  end
+
+
+
+   desc "Submit a new Beta Build to Crashlytics Beta"
+   lane :beta do
+     gradle(task: "clean assembleRelease")
+     crashlytics
+  
+     # sh "your_script.sh"
+     # You can also use other beta testing services here
+   end
+
+   desc "Deploy a new version to the Google Play"
+   lane :deploy do
+     gradle(task: "clean assembleRelease")
+     upload_to_play_store
+   end
+end
+

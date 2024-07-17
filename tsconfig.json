@@ -1,0 +1,59 @@
+// {
+//   "extends": "@tsconfig/react-native/tsconfig.json"
+// }
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "*": ["src/*"],
+//       "@components": ["src/components/index"],
+//       "@hooks": ["src/hooks/index"]
+//     }
+//   },
+//   "extends": "@tsconfig/react-native/tsconfig.json"
+// }
+
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@*": ["src/*"],
+      "@test/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@components": ["src/components"],
+      "@contexts/*": ["src/contexts/*"],
+      "@navigation/*": ["src/navigation/*"],
+      "@services/*": ["src/services/*"],
+      "@theme/*": ["src/theme/*"],
+      "@customTypes": ["src/types"],
+      "@screens": ["src/screens"],
+      "@utils/*": ["src/utils/*"],
+      "@constants/*": ["src/constants/*"],
+      "@api/*": ["src/api/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+
+  // "compilerOptions": {
+  //   "baseUrl": ".",
+  //   "paths": {
+  //     "*": ["./src/*"],
+  //     // "@components/*": ["src/components/*"],
+  //     "@assets": ["src/assets"],
+  //     "@hooks": ["src/hooks"],
+  //     "@components": ["src/components"]
+  //     // "@contexts": "./src/contexts",
+  //     // "@navigation": "./src/navigation",
+  //     // "@services": "./src/services",
+  //     // "@theme": "./src/theme",
+  //     // "@types": "./src/types",
+  //     // "@screens": "./src/screens",
+  //     // "@utils": "./src/utils"
+  //   }
+  // }
+}

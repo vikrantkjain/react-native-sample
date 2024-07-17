@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test loadingIndicator 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "elevation": 20,
+      "flex": 1,
+      "height": "100%",
+      "justifyContent": "center",
+      "position": "absolute",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderRadius": 50,
+          "height": 100,
+          "justifyContent": "center",
+          "width": 100,
+        },
+        undefined,
+      ]
+    }
+  >
+    <ActivityIndicator
+      color="#048de0"
+      size={80}
+    />
+  </View>
+</View>
+`;

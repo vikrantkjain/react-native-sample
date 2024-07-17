@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "overflow": "hidden",
+      },
+      undefined,
+    ]
+  }
+>
+  <FastImageView
+    defaultSource={null}
+    resizeMode="cover"
+    source={
+      {
+        "uri": "https://cdn.kinandcarta.com/-/media-assets/images/kincarta/insights/2022/02/react-native/react_hero.png?as=0&iar=0&w=1200&rev=61e1dad3af7e465e9544cf8490237772&hash=0AD31383BCBA1DA1C88546327312BA33",
+      }
+    }
+    style={
+      {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+</View>
+`;

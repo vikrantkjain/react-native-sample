@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`stop in the middle of animation 1`] = `
+<View
+  collapsable={false}
+  style={
+    [
+      {
+        "justifyContent": "center",
+      },
+      {
+        "borderRadius": 11.25,
+        "height": 22.5,
+        "width": 50,
+      },
+      {
+        "backgroundColor": undefined,
+      },
+    ]
+  }
+  testID="TEST_VIEW"
+>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#fff",
+          "position": "absolute",
+          "zIndex": 1,
+        },
+        {
+          "borderRadius": 11.25,
+          "height": 22.5,
+          "width": 22.5,
+        },
+        {
+          "backgroundColor": undefined,
+          "transform": [
+            {
+              "translateX": 0,
+            },
+          ],
+        },
+      ]
+    }
+  />
+</View>
+`;

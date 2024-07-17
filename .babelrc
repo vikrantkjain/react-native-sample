@@ -1,0 +1,69 @@
+{
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-remove-console",
+        [
+          "module-resolver",
+          {
+            "root": ["./src"],
+            "extensions": [
+              ".ios.js",
+              ".android.js",
+              ".js",
+              ".ts",
+              ".tsx",
+              ".json"
+            ],
+            "alias": {
+              "@assets": "./src/assets",
+              "@hooks": "./src/hooks",
+              "@components": "./src/components",
+              "@contexts": "./src/contexts",
+              "@navigation": "./src/navigation",
+              "@services": "./src/services",
+              "@theme": "./src/theme",
+              "@customTypes": "./src/types",
+              "@screens": "./src/screens",
+              "@utils": "./src/utils",
+              "@constants": "./src/constants",
+              "@api": "./src/api"
+            }
+          }
+        ]
+      ]
+    },
+    "development": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "root": ["./src"],
+            "extensions": [
+              ".ios.js",
+              ".android.js",
+              ".js",
+              ".ts",
+              ".tsx",
+              ".json"
+            ],
+            "alias": {
+              "@assets": "./src/assets",
+              "@hooks": "./src/hooks",
+              "@components": "./src/components",
+              "@contexts": "./src/contexts",
+              "@navigation": "./src/navigation",
+              "@services": "./src/services",
+              "@theme": "./src/theme",
+              "@customTypes": "./src/types",
+              "@screens": "./src/screens",
+              "@utils": "./src/utils",
+              "@constants": "./src/constants",
+              "@api": "./src/api"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

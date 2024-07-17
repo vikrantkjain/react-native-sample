@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test round image 1`] = `
+<View
+  style={
+    {
+      "alignSelf": "center",
+      "margin": 10,
+    }
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": true,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "borderColor": "rgba(245,192,32,1)",
+          "borderWidth": 5,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        {
+          "borderRadius": 50,
+          "height": 100,
+          "width": 100,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "overflow": "hidden",
+          },
+          {
+            "alignSelf": "center",
+            "height": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <FastImageView
+        defaultSource={null}
+        resizeMode="stretch"
+        source={
+          {
+            "uri": "https://picsum.photos/200/300",
+          }
+        }
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
